@@ -4,17 +4,23 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
-	int sum = 0;
 	
-	int x,i; 
-	printf("input a number :");
-    scanf("%d", &x);
-    
-    for (i = 0 ; i <= x ; i++)
-   		sum = sum + i;
+	int x,y,result;
+	char z;
+	printf("enter the calculation:");
+	scanf("%d%c%d", &x,&z,&y);
 	
-	printf("The result is %d", sum); //결과 출력 
-    
-	
+	if (z == '+')
+		result = x+y;
+	else if (z == '-')
+		result = x-y;
+	else if (z == '*')
+		result = x*y;
+	else if ( z == '/')
+		result = x/y;
+		
+	printf("= %d", result);
+ 
+
 	return 0;
 }
